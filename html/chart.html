@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/mainMenu.css">
+    <link rel="stylesheet" href="../css/HP.css" />
+   
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="userProfile.html" class="nav-logo">
+              <img src="https://static.vecteezy.com/system/resources/previews/022/715/778/non_2x/cute-cool-boy-dabbing-pose-cartoon-icon-illustration-people-fashion-icon-concept-isolated-generat-ai-free-photo.jpg" class = "userProfile" alt="Profile Picture">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="mainMenu.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="chart.html">Statistics</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <h2 class="chart-heading">Statistics</h2>
+    <p>Frequent Search on Consumables:</p>
+    <div class="stats">
+        <div class="chart-container">
+            <canvas class="my-chart" id="chart1"></canvas>
+        </div>
+        <div class="details">
+            <ul></ul>
+        </div>
+    </div>
+    <p>Recommended budget to spend on each category (August):</p>
+    <div class="stats">
+        <div class="chart-container">
+            <canvas class="my-chart" id="chart2"></canvas>
+        </div>
+        <div class="details">
+            <ul></ul>
+        </div>
+    </div>
+
+    <p>Outlet Preference:</p>
+    <div class="stats">
+        <div class="chart-container">
+            <canvas class="my-chart" id="chart3"></canvas>
+        </div>
+        <div class="details">
+            <ul></ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

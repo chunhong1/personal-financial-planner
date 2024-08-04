@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+            input[type="text"] {
+            width: 50%; /* Full width */
+            padding: 12px 20px; /* Padding */
+            margin: 8px 0; /* Margin */
+            box-sizing: border-box; /* Include padding and border in width */
+            border: 2px solid #ccc; /* Grey border */
+            border-radius: 50px; /* Rounded corners */
+            background-color: rgba(255, 255, 255, 0.8); /* Light grey background */
+            font-size: 16px; /* Font size */
+            transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+        }
+        input[type="email"] {
+            width: 50%; /* Full width */
+            padding: 12px 20px; /* Padding */
+            margin: 8px 0; /* Margin */
+            box-sizing: border-box; /* Include padding and border in width */
+            border: 2px solid #ccc; /* Grey border */
+            border-radius: 50px; /* Rounded corners */
+            background-color: rgba(255, 255, 255, 0.8); /* Light grey background */
+            font-size: 16px; /* Font size */
+            transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+        }
+        input[type="tel"] {
+            width: 50%; /* Full width */
+            padding: 12px 20px; /* Padding */
+            margin: 8px 0; /* Margin */
+            box-sizing: border-box; /* Include padding and border in width */
+            border: 2px solid #ccc; /* Grey border */
+            border-radius: 50px; /* Rounded corners */
+            background-color: rgba(255, 255, 255, 0.8); /* Light grey background */
+            font-size: 16px; /* Font size */
+            transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+        }
+        .navbar-brand {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #6f42c1 !important;
+            display: flex;
+            align-items: center;
+        }
+        .navbar-logo {
+            height: 40px;
+            margin-right: 10px;
+        }
+        .profile-header {
+            background-color: rgba(255, 255, 255, 0.3);
+            padding: 2rem 0;
+            
+        }
+        .background {
+            background-image: url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA3L2pvYjE0NDgtYmFja2dyb3VuZC0wNGEteF8xLmpwZw.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+            height: 100%; /* Adjust the height as needed */
+        }
+    </style>
+    <script>
+               function getCookie(name) {
+            let cookieArr = document.cookie.split(";");
+            for(let i = 0; i < cookieArr.length; i++) {
+                let cookiePair = cookieArr[i].split("=");
+                if(name == cookiePair[0].trim()) {
+                    return decodeURIComponent(cookiePair[1]);
+                }
+            }
+            return null;
+        }
+        function setTextboxValue() {
+            let username = getCookie("username");
+            if(username) {
+                document.getElementById("username").value = username;
+            }
+            let titleusername = getCookie("username");
+            if(titleusername) {
+                document.getElementById("titleusername").textContent = titleusername ? `@${titleusername}` : "Cookie not found";
+            }
+            let password = getCookie("password");
+            let email = getCookie("email");
+            if(email) {
+                document.getElementById("email").value = email;
+            }
+            let tel = getCookie("phonenumber");
+            if(tel) {
+                document.getElementById("tel").value = tel;
+            }
+
+        }
+        
+        function updateCookie() {
+            var x=document.forms["Edit"]["repassword"].value;
+                var y=document.forms["Edit"]["password"].value;
+                if (x!=y ||x==""){
+                alert("The confirm password must be same as password!");
+                return false;
+                    }
+
+                let username=document.getElementById("username").value;
+                let password=document.getElementById("password").value;
+                let email=document.getElementById("email").value;
+                let tel=document.getElementById("tel").value;
+
+                document.cookie=`username=${username};`;
+                document.cookie=`password=${password};`;
+                document.cookie=`email=${email};`;
+                document.cookie=`phonenumber=${tel};`;
+
+                alert("Update Successfully!!!");
+                window.location.href = "userProfile.html";
+                return false;
+        }
+        window.onload = setTextboxValue;
+    </script>
+</head>
+<body>
+
+ <div class="background" >
+    <form action="" for="Edit" method="post" id="Edit">
+        <div class="profile-header">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                        <img src="https://static.vecteezy.com/system/resources/previews/022/715/778/non_2x/cute-cool-boy-dabbing-pose-cartoon-icon-illustration-people-fashion-icon-concept-isolated-generat-ai-free-photo.jpg" alt="Profile Picture" class="img-fluid rounded-circle">
+                    </div>
+                    <div class="col-md-8">
+                            <h1 id="titleusername"></h1>
+                            <p class="lead">Joined 1 days</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8">
+                <h1>Edit Profile</h1>
+                <br>
+                <h2 class="mt-4">
+                    <form>
+                        <label for="username">Change Username</label><br>
+                        <input type="text" id="username" name="username"><br>
+                        <br>
+                        <label for="password">New Password</label><br>
+                        <input type="text" id="password" name="password" ><br>
+                        <label for="password">Re-Insert Password</label><br>
+                        <input type="text" id="repassword" name="repassword"><br>
+                        <br>
+                        <label for="email">Change Email</label><br>
+                        <input type="email" id="email" name="email" ><br>
+                        <br>
+                        <label for="tel">Change Phone No</label><br>
+                        <input type="tel" id="tel" name="tel" ><br><br>
+                        <button onclick="updateCookie()">Submit</button>
+                      </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</from>
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+

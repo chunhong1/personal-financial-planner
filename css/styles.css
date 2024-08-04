@@ -1,0 +1,127 @@
+.userProfile{
+    width: 100px;
+}
+
+main {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.navbar {
+    background-color: hsl(0, 0%, 99%);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 15px 0;
+    margin-right: auto; /* Push the logo to the left */
+}
+
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    margin: 0 10px; /* Adjust spacing as needed */
+}
+
+.nav-menu a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.nav-menu a:hover {
+    background-color: hsl(194, 68%, 89%);
+}
+
+.stats {
+    font-family: "Rubik", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin: 0 auto;
+    margin-bottom: 40px; /* Added space between each chart */
+    width: 500px;
+    box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: 8px 32px;
+    color: #023047;
+    transition: all 400ms ease;
+    background: linear-gradient(to left, #7f599b, #ffffff);
+}
+
+.stats:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 16px -7px rgba(0, 0, 0, 0.3);
+}
+
+.chart-container {
+    width: 300px; /* Set a specific width */
+    height: 300px; /* Set a specific height */
+    
+}
+
+.canvas {
+    width: 100%; /* Ensure canvas takes up full container width */
+    height: 100%; /* Ensure canvas takes up full container height */
+    
+
+}
+
+.my-chart {
+    width: 100%;
+    height: 100%;
+}
+
+.stats .details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.stats .details ul li {
+    font-size: 16px;
+    margin: 12px 0;
+    text-transform: uppercase;
+}
+
+.stats .details .percentage {
+    font-weight: 700;
+    color: black;
+}
+
+p{
+font-family: "Rubik", sans-serif;
+text-align: center;
+font-weight: bold;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full height */
+    font-family: "Rubik", sans-serif; /* Example font */
+}
+
+h2{
+    text-align: center;
+    font-weight: bold;
+}
+
